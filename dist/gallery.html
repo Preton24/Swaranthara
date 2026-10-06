@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo & Video Gallery | Swaranthara School of Music</title>
+  <meta name="description" content="Explore photos and performances from Swaranthara School of Music. See classroom sessions, annual stage concerts, state cultural festivals, and student awards.">
+  <link rel="icon" href="/assets/logo-CaojPZs_.jpg" type="image/jpeg">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <script type="module" crossorigin src="/assets/main-B-OLu7LU.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-B0yywuKK.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">
+          <img src="/assets/logo-CaojPZs_.jpg" alt="Swaranthara School of Music Logo">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SWARANTHARA</span>
+          <span class="brand-tag">School of Music</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About & Founder</a></li>
+        <li><a href="explore.html" class="nav-link">Programs & Videos</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary btn-sm" data-open-trial-modal>
+          <i class="fas fa-ticket-alt"></i> Book Free Trial
+        </button>
+        <button class="hamburger-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop"></div>
+  <nav class="mobile-nav">
+    <div class="brand-logo" style="margin-bottom: 20px;">
+      <div class="logo-badge">
+        <img src="/assets/logo-CaojPZs_.jpg" alt="Swaranthara Logo">
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">SWARANTHARA</span>
+        <span class="brand-tag">School of Music</span>
+      </div>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="nav-link"><i class="fas fa-home" style="margin-right:10px; color:var(--primary-gold)"></i> Home</a></li>
+      <li><a href="about.html" class="nav-link"><i class="fas fa-user-tie" style="margin-right:10px; color:var(--primary-gold)"></i> About & Founder</a></li>
+      <li><a href="explore.html" class="nav-link"><i class="fas fa-music" style="margin-right:10px; color:var(--primary-gold)"></i> Programs & Videos</a></li>
+      <li><a href="gallery.html" class="nav-link active"><i class="fas fa-images" style="margin-right:10px; color:var(--primary-gold)"></i> Gallery</a></li>
+      <li><a href="contact.html" class="nav-link"><i class="fas fa-map-marker-alt" style="margin-right:10px; color:var(--primary-gold)"></i> Contact Us</a></li>
+    </ul>
+    <div style="margin-top:auto; display:flex; flex-direction:column; gap:12px;">
+      <a href="https://wa.me/918105575750" class="btn btn-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <section class="hero-section" style="min-height: 50vh; padding-top: calc(var(--header-height) + 40px); padding-bottom: 50px;">
+    <div class="hero-bg-media">
+      <img src="/assets/annual_recital_stage-T_FmEt4t.jpg" alt="Swaranthara Gallery Hero Banner">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container" style="position:relative; z-index:3; text-align:center;">
+      <h1 class="section-title">
+        Captured Moments of <br>
+        <span class="gradient-text">Harmony & Mastery</span>
+      </h1>
+      <p class="section-subtitle" style="max-width:680px; margin:0 auto;">
+        Explore our classroom practice, grand annual stage recitals, state cultural celebrations, and student honors.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px; flex-wrap:wrap; gap:20px;">
+        <div class="gallery-filter-tabs" style="margin-bottom:0;">
+          <button class="filter-btn gallery-filter-btn active" data-filter="all">All Items</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="classes">Classroom Sessions</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="concerts">Stage & Concerts</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="achievements">Awards & Mentors</button>
+        </div>
+        <a href="index.html" class="btn btn-secondary btn-sm">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Item 1: Guitar Group -->
+        <div class="gallery-item" data-category="classes" data-title="Guitar Group Training Session - Chord Transitions & Rhythm">
+          <img src="/assets/guitar-group--Zjz4nx0.jpg" alt="Guitar Group Training Session">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-tag">Classes</span>
+            <h5 class="gallery-item-title">Guitar Ensemble Practice</h5>
+          </div>
+        </div>
+
+        <!-- Item 2: Teacher Mentoring Keyboard -->
+        <div class="gallery-item" data-category="classes" data-title="Keyboard & Piano Guidance by Umesh R">
+          <img src="/assets/teacher-keyboard-BxFcH9gl.jpg" alt="Keyboard & Piano Guidance by Umesh R">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-tag">Classes</span>
+            <h5 class="gallery-item-title">1-on-1 Keyboard Mentoring</h5>
+          </div>
+        </div>
+
+        <!-- Item 3: Yamaha Keyboard Practice -->
+        <div class="gallery-item" data-category="classes" data-title="Staff Notation Sight-Reading & Melody Practice">
+          <img src="/assets/student-yamaha-DxBEr2P7.jpg" alt="Staff Notation Sight-Reading & Melody Practice">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-tag">Classes</span>
+            <h5 class="gallery-item-title">Staff Notation & Chords</h5>
+          </div>
+        </div>
+
+        <!-- Item 4: Annual Recital Stage -->
+        <div class="gallery-item" data-category="concerts" data-title="Annual Recital Live Stage Concert Performance">
+          <img src="/assets/annual_recital_stage-T_FmEt4t.jpg" alt="Annual Recital Live Stage Concert Performance">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-tag">Concerts</span>
+            <h5 class="gallery-item-title">Annual Grand Stage Concert</h5>
+          </div>
+        </div>
+
+        <!-- Item 5: Student Presentation -->
+        <div class="gallery-item" data-category="concerts" data-title="Student Classical & Light Music Presentation">
+          <img src="/assets/vocal_performance-D-gMYVRu.jpg" alt="Student Classical Presentation">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-tag">Concerts</span>
+            <h5 class="gallery-item-title">Live Stage Presentation</h5>
+          </div>
+        </div>
+
+        <!-- Item 6: State Cultural Fest -->
+        <div class="gallery-item" data-category="concerts" data-title="Hampi Utsava & Mysore Dasara Collaboration Performance">
+          <img src="/assets/acoustic_guitar_solo-D2iF18ca.jpg" alt="State Cultural Fest Performance">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-tag">Concerts</span>
+            <h5 class="gallery-item-title">State Festival Concert</h5>
+          </div>
+        </div>
+
+        <!-- Item 7: Awards Ceremony -->
+        <div class="gallery-item" data-category="achievements" data-title="Annual Student Honors & Trinity Certification Ceremony">
+          <img src="/assets/awards_trophy_stage-v4DS7ED2.jpg" alt="Annual Student Honors Ceremony">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-tag">Achievements</span>
+            <h5 class="gallery-item-title">Awards & Trinity Honors</h5>
+          </div>
+        </div>
+
+        <!-- Item 8: Founder Umesh R in Studio -->
+        <div class="gallery-item" data-category="achievements" data-title="Umesh R, Founder & Music Programmer in Recording Studio (13+ Years Experience)">
+          <img src="/assets/umesh_studio-Cm2_vdVh.png" alt="Umesh R, Founder & Music Composer in Studio">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-tag">Achievements</span>
+            <h5 class="gallery-item-title">Chief Mentor Umesh R in Studio</h5>
+          </div>
+        </div>
+
+        <!-- Item 9: Classroom Joy -->
+        <div class="gallery-item" data-category="classes" data-title="Foundation Music Batch">
+          <img src="/assets/junior_music_class-BHgy8xd3.jpg" alt="Foundation Music Batch">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-tag">Classes</span>
+            <h5 class="gallery-item-title">Foundation Class Session</h5>
+          </div>
+        </div>
+
+        <!-- Item 10: Studio Instruments -->
+        <div class="gallery-item" data-category="classes" data-title="Studio Acoustic & Electronic Instruments Setup">
+          <img src="/assets/hero_conservatory-BSAJDr6c.jpg" alt="Studio Acoustic & Electronic Instruments Setup">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-tag">Classes</span>
+            <h5 class="gallery-item-title">Studio Instrument Suite</h5>
+          </div>
+        </div>
+
+        <!-- Item 11: Swaranthara Emblem -->
+        <div class="gallery-item" data-category="achievements" data-title="Swaranthara School of Music Official Insignia">
+          <img src="/assets/logo-CaojPZs_.jpg" alt="Swaranthara Official Insignia">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-tag">Achievements</span>
+            <h5 class="gallery-item-title">Swaranthara Emblem</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-banner-card">
+        <h2>Ready to Step Onto the Stage?</h2>
+        <p>Join our supportive musical community. Take your first trial class at Swaranthara today.</p>
+        <div class="cta-buttons-wrap">
+          <button class="btn btn-primary btn-lg" data-open-trial-modal>
+            <i class="fas fa-calendar-check"></i> Book Free Trial Class
+          </button>
+          <a href="https://wa.me/918105575750" target="_blank" class="btn btn-whatsapp btn-lg">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us (+91 8105575750)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 18px;">
+            <div class="logo-badge">
+              <img src="/assets/logo-CaojPZs_.jpg" alt="Swaranthara Logo">
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">SWARANTHARA</span>
+              <span class="brand-tag">School of Music</span>
+            </div>
+          </div>
+          <p style="font-size: 0.95rem; margin-bottom: 20px;">
+            Where the rhythms of tradition meet the melodies of modernity.
+          </p>
+          <div class="social-links-bar">
+            <a href="https://www.instagram.com/swaranthara.22?igsh=bnh3OHhvMm1qYjAz" target="_blank" class="btn-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/918105575750" target="_blank" class="btn-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:Swaranthara.music2022@gmail.com" class="btn-icon" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & Founder</a></li>
+            <li><a href="explore.html">Explore Programs</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Courses</h4>
+          <ul class="footer-links-list">
+            <li><a href="explore.html#piano">Piano & Keyboard</a></li>
+            <li><a href="explore.html#guitar">Acoustic & Classical Guitar</a></li>
+            <li><a href="explore.html#vocals">Vocal Coaching</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio Contact</h4>
+          <address class="footer-contact-details">
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>No 502, 1st Floor, 16th Cross, Nagasandra Post, Bangalore – 560073</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span><a href="tel:+918105575750">+91 8105575750</a></span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span><a href="mailto:Swaranthara.music2022@gmail.com">Swaranthara.music2022@gmail.com</a></span>
+            </div>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Swaranthara School of Music. All rights reserved.</p>
+        <p>Directed by <strong style="color:var(--primary-gold)">Umesh R</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-backdrop" id="lightbox-modal">
+    <div class="modal-dialog lightbox-dialog">
+      <button class="modal-close-btn" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+      <img id="lightbox-img" src="" alt="Swaranthara Gallery Preview">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Free Trial Booking Modal -->
+  <div class="modal-backdrop" id="trial-modal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="trial-modal-close" aria-label="Close Modal">&times;</button>
+      <h3 style="font-size:1.6rem; margin-bottom:8px;">Book Your Free Trial Class</h3>
+      <p style="margin-bottom:24px; font-size:0.9rem; color:var(--text-muted);">Experience our interactive studio session in Nagasandra, Bangalore.</p>
+
+      <form id="trial-booking-form">
+        <div class="form-group">
+          <label class="form-label">Student Name *</label>
+          <input type="text" name="trial_name" class="form-control" placeholder="Enter full name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone / WhatsApp Number *</label>
+          <input type="tel" name="trial_phone" class="form-control" placeholder="+91 98765 43210" required>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label">Select Course *</label>
+            <select name="trial_course" class="form-control">
+              <option value="Piano & Keyboard">Piano & Keyboard</option>
+              <option value="Guitar Training">Acoustic & Classical Guitar</option>
+              <option value="Vocal Coaching">Vocal & Classical Singing</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Preferred Mode *</label>
+            <select name="trial_mode" class="form-control">
+              <option value="In-Studio (Nagasandra)">In-Studio (Nagasandra)</option>
+              <option value="Online 1-on-1">Online 1-on-1 Live</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">
+          <i class="fab fa-whatsapp"></i> Confirm & Schedule via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Quick Action -->
+  <a href="https://wa.me/918105575750" target="_blank" class="floating-whatsapp" aria-label="Chat with Swaranthara on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>
