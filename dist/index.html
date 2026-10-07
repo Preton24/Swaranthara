@@ -15,8 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Custom Styles -->
-  <script type="module" crossorigin src="/assets/main-B-OLu7LU.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-B0yywuKK.css">
+  <script type="module" crossorigin src="/assets/main-DeQvsVpb.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-DZ-sxrKy.css">
 </head>
 <body>
 
@@ -137,32 +137,105 @@
         </div>
       </div>
 
-      <!-- Hero Right: Interactive Visual Showcase -->
+      <!-- Hero Right: Interactive Musical Keyboard Showcase -->
       <div class="hero-visual-card">
-        <div class="hero-main-card">
-          <div class="hero-card-img-wrap">
-            <img src="/assets/teacher-keyboard-BxFcH9gl.jpg" alt="Umesh R Mentoring Young Students">
-            <div class="hero-card-badge">
-              <span class="pulse-dot"></span> Live Studio Batches
+        <div class="hero-main-card hero-synth-card">
+          <div class="hero-synth-top">
+            <div class="hero-synth-badge">
+              <span class="pulse-dot"></span> Live Interactive Keyboard
+            </div>
+            <div class="hero-synth-controls">
+              <select id="instrument-select" class="synth-select">
+                <option value="piano">Grand Piano</option>
+                <option value="strings">Warm Strings</option>
+                <option value="marimba">Concert Marimba</option>
+              </select>
+              <button id="play-demo-tune-btn" class="btn btn-secondary btn-sm" style="padding: 6px 12px; font-size: 0.78rem;">
+                <i class="fas fa-play"></i> Melody
+              </button>
             </div>
           </div>
+
+          <div class="hero-synth-helper">
+            <p><i class="fas fa-hand-pointer" style="color:var(--primary-gold-light); margin-right:4px;"></i> Tap keys or press <kbd style="background:rgba(255,255,255,0.12); padding:1px 5px; border-radius:3px; font-family:monospace; color:#fff;">A - L</kbd> to play in real-time</p>
+          </div>
+
+          <!-- Virtual Piano Keyboard -->
+          <div class="piano-wrapper hero-piano-wrapper">
+            <div class="piano-keys hero-piano-keys">
+              <!-- Octave 1 -->
+              <div class="piano-key white" data-note="C4">
+                <span class="key-label">C</span>
+                <span class="key-hint">A</span>
+              </div>
+              <div class="piano-key black" data-note="C#4">
+                <span class="key-label">C#</span>
+                <span class="key-hint">W</span>
+              </div>
+              <div class="piano-key white" data-note="D4">
+                <span class="key-label">D</span>
+                <span class="key-hint">S</span>
+              </div>
+              <div class="piano-key black" data-note="D#4">
+                <span class="key-label">D#</span>
+                <span class="key-hint">E</span>
+              </div>
+              <div class="piano-key white" data-note="E4">
+                <span class="key-label">E</span>
+                <span class="key-hint">D</span>
+              </div>
+              <div class="piano-key white" data-note="F4">
+                <span class="key-label">F</span>
+                <span class="key-hint">F</span>
+              </div>
+              <div class="piano-key black" data-note="F#4">
+                <span class="key-label">F#</span>
+                <span class="key-hint">T</span>
+              </div>
+              <div class="piano-key white" data-note="G4">
+                <span class="key-label">G</span>
+                <span class="key-hint">G</span>
+              </div>
+              <div class="piano-key black" data-note="G#4">
+                <span class="key-label">G#</span>
+                <span class="key-hint">Y</span>
+              </div>
+              <div class="piano-key white" data-note="A4">
+                <span class="key-label">A</span>
+                <span class="key-hint">H</span>
+              </div>
+              <div class="piano-key black" data-note="A#4">
+                <span class="key-label">A#</span>
+                <span class="key-hint">U</span>
+              </div>
+              <div class="piano-key white" data-note="B4">
+                <span class="key-label">B</span>
+                <span class="key-hint">J</span>
+              </div>
+              <!-- Octave 2 start -->
+              <div class="piano-key white" data-note="C5">
+                <span class="key-label">C5</span>
+                <span class="key-hint">K</span>
+              </div>
+              <div class="piano-key black" data-note="C#5">
+                <span class="key-label">C#5</span>
+                <span class="key-hint">O</span>
+              </div>
+              <div class="piano-key white" data-note="D5">
+                <span class="key-label">D5</span>
+                <span class="key-hint">L</span>
+              </div>
+            </div>
+          </div>
+
           <div class="hero-card-footer">
             <div class="hero-card-info">
-              <h4>Direct Mentorship by Umesh R</h4>
-              <p>13+ Years Teaching Experience | Stage Composer</p>
+              <h4>Real-time Audio Engine</h4>
+              <p>Trinity & Conservatory Certified Curriculum</p>
             </div>
-            <a href="about.html" class="btn-icon" title="View Founder Profile">
+            <a href="explore.html" class="btn-icon" title="Explore Programs">
               <i class="fas fa-arrow-right"></i>
             </a>
-          </div>
-        </div>
-
-        <!-- Floating Stat Pill -->
-        <div class="floating-stat-pill">
-          <div class="stat-pill-icon"><i class="fas fa-music"></i></div>
-          <div class="stat-pill-text">
-            <strong>500+ Students</strong>
-            <span>Successfully Trained</span>
           </div>
         </div>
       </div>
@@ -190,103 +263,6 @@
         <div class="stat-box">
           <div class="stat-number counter-val" data-target="25" data-suffix="+">0</div>
           <div class="stat-label">Stage Concerts & Honors</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       Interactive Musical Playground (Web Audio Synthesizer)
-       ========================================================================== -->
-  <section class="synth-section">
-    <div class="container">
-      <div class="synth-container">
-        <div class="synth-header">
-          <h3>Try Our Virtual <span class="gradient-text">Piano & Synthesizer</span></h3>
-          <p>Click, tap, or press keyboard keys <kbd style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px; font-family:monospace;">A-K</kbd> to play realistic musical notes synthesized in real-time!</p>
-        </div>
-
-        <div class="synth-controls">
-          <label for="instrument-select" style="font-size:0.9rem; font-weight:600; color:var(--primary-gold-light);">
-            <i class="fas fa-sliders-h"></i> Instrument:
-          </label>
-          <select id="instrument-select" class="synth-select">
-            <option value="piano">Grand Acoustic Piano</option>
-            <option value="strings">Warm Orchestral Strings</option>
-            <option value="marimba">Concert Marimba & Bells</option>
-          </select>
-
-          <button id="play-demo-tune-btn" class="btn btn-secondary btn-sm">
-            <i class="fas fa-play"></i> Play Melody
-          </button>
-        </div>
-
-        <!-- Virtual Piano Keyboard -->
-        <div class="piano-wrapper">
-          <div class="piano-keys">
-            <!-- Octave 1 -->
-            <div class="piano-key white" data-note="C4">
-              <span class="key-label">C</span>
-              <span class="key-hint">A</span>
-            </div>
-            <div class="piano-key black" data-note="C#4">
-              <span class="key-label">C#</span>
-              <span class="key-hint">W</span>
-            </div>
-            <div class="piano-key white" data-note="D4">
-              <span class="key-label">D</span>
-              <span class="key-hint">S</span>
-            </div>
-            <div class="piano-key black" data-note="D#4">
-              <span class="key-label">D#</span>
-              <span class="key-hint">E</span>
-            </div>
-            <div class="piano-key white" data-note="E4">
-              <span class="key-label">E</span>
-              <span class="key-hint">D</span>
-            </div>
-            <div class="piano-key white" data-note="F4">
-              <span class="key-label">F</span>
-              <span class="key-hint">F</span>
-            </div>
-            <div class="piano-key black" data-note="F#4">
-              <span class="key-label">F#</span>
-              <span class="key-hint">T</span>
-            </div>
-            <div class="piano-key white" data-note="G4">
-              <span class="key-label">G</span>
-              <span class="key-hint">G</span>
-            </div>
-            <div class="piano-key black" data-note="G#4">
-              <span class="key-label">G#</span>
-              <span class="key-hint">Y</span>
-            </div>
-            <div class="piano-key white" data-note="A4">
-              <span class="key-label">A</span>
-              <span class="key-hint">H</span>
-            </div>
-            <div class="piano-key black" data-note="A#4">
-              <span class="key-label">A#</span>
-              <span class="key-hint">U</span>
-            </div>
-            <div class="piano-key white" data-note="B4">
-              <span class="key-label">B</span>
-              <span class="key-hint">J</span>
-            </div>
-            <!-- Octave 2 start -->
-            <div class="piano-key white" data-note="C5">
-              <span class="key-label">C5</span>
-              <span class="key-hint">K</span>
-            </div>
-            <div class="piano-key black" data-note="C#5">
-              <span class="key-label">C#5</span>
-              <span class="key-hint">O</span>
-            </div>
-            <div class="piano-key white" data-note="D5">
-              <span class="key-label">D5</span>
-              <span class="key-hint">L</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -462,7 +438,7 @@
         <!-- Program 3: Vocal Coaching -->
         <div class="glass-card program-card">
           <div class="program-card-img">
-            <img src="/assets/vocal_performance-D-gMYVRu.jpg" alt="Vocal Coaching and Singing Training">
+            <img src="/assets/classroom_theory_vocal-Co8MU5LP.jpg" alt="Vocal Coaching and Singing Training">
           </div>
           <div class="program-content">
             <div class="program-meta">
@@ -510,7 +486,7 @@
         <!-- Video 1 -->
         <div class="video-card" data-youtube-id="b6VuOLAtFYM">
           <div class="video-thumb-wrap">
-            <img src="https://img.youtube.com/vi/b6VuOLAtFYM/maxresdefault.jpg" alt="Student Keyboard Recital" onerror="this.src='assets/images/student-yamaha.jpg'">
+            <img src="https://img.youtube.com/vi/b6VuOLAtFYM/hqdefault.jpg" alt="Student Keyboard Recital" onerror="this.src='assets/images/student-yamaha.jpg'">
             <div class="video-play-btn"><i class="fas fa-play"></i></div>
             <div class="video-duration-badge">HD Video</div>
           </div>
@@ -523,7 +499,7 @@
         <!-- Video 2 -->
         <div class="video-card" data-youtube-id="fU1_1uPLUNk">
           <div class="video-thumb-wrap">
-            <img src="https://img.youtube.com/vi/fU1_1uPLUNk/maxresdefault.jpg" alt="Ensemble Harmonies" onerror="this.src='assets/images/guitar-group.jpg'">
+            <img src="https://img.youtube.com/vi/fU1_1uPLUNk/hqdefault.jpg" alt="Ensemble Harmonies" onerror="this.src='assets/images/classroom_keyboards.jpg'">
             <div class="video-play-btn"><i class="fas fa-play"></i></div>
             <div class="video-duration-badge">HD Video</div>
           </div>
@@ -536,7 +512,7 @@
         <!-- Video 3 -->
         <div class="video-card" data-youtube-id="7CWz6lzFEpw">
           <div class="video-thumb-wrap">
-            <img src="https://img.youtube.com/vi/7CWz6lzFEpw/maxresdefault.jpg" alt="Guitar Rhythms and Fingerstyle" onerror="this.src='assets/images/guitar-group.jpg'">
+            <img src="https://img.youtube.com/vi/7CWz6lzFEpw/hqdefault.jpg" alt="Guitar Rhythms and Fingerstyle" onerror="this.src='assets/images/guitar-group.jpg'">
             <div class="video-play-btn"><i class="fas fa-play"></i></div>
             <div class="video-duration-badge">HD Video</div>
           </div>
@@ -549,7 +525,7 @@
         <!-- Video 4 -->
         <div class="video-card" data-youtube-id="vnbjXPmqPBs">
           <div class="video-thumb-wrap">
-            <img src="https://img.youtube.com/vi/vnbjXPmqPBs/maxresdefault.jpg" alt="Vocal & Instrument Synergy" onerror="this.src='assets/images/vocal_performance.jpg'">
+            <img src="https://img.youtube.com/vi/vnbjXPmqPBs/hqdefault.jpg" alt="Vocal & Instrument Synergy" onerror="this.src='assets/images/classroom_theory_vocal.jpg'">
             <div class="video-play-btn"><i class="fas fa-play"></i></div>
             <div class="video-duration-badge">HD Video</div>
           </div>
@@ -594,84 +570,30 @@
         </p>
       </div>
 
-      <div class="gallery-filter-tabs">
-        <button class="filter-btn gallery-filter-btn active" data-filter="all">All Photos</button>
-        <button class="filter-btn gallery-filter-btn" data-filter="classes">Classroom Sessions</button>
-        <button class="filter-btn gallery-filter-btn" data-filter="concerts">Stage & Concerts</button>
-        <button class="filter-btn gallery-filter-btn" data-filter="achievements">Awards & Mentors</button>
-      </div>
 
       <div class="gallery-grid">
-        <div class="gallery-item" data-category="classes" data-title="Guitar Group Ensemble Class">
-          <img src="/assets/guitar-group--Zjz4nx0.jpg" alt="Guitar Group Ensemble Class">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-tag">Classes</span>
-            <h5 class="gallery-item-title">Guitar Ensemble Session</h5>
-          </div>
+        <div class="gallery-item" data-category="classes" data-title="Keyboard Batch Session">
+          <img src="/assets/classroom_keyboards-v8qSLpuX.jpg" alt="Keyboard Batch Session">
+        </div>
+
+        <div class="gallery-item" data-category="classes" data-title="Vocal & Music Theory Session">
+          <img src="/assets/classroom_theory_vocal-Co8MU5LP.jpg" alt="Vocal & Music Theory Session">
         </div>
 
         <div class="gallery-item" data-category="classes" data-title="Keyboard & Piano Guidance by Umesh R">
-          <img src="/assets/teacher-keyboard-BxFcH9gl.jpg" alt="Keyboard & Piano Guidance by Umesh R">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-tag">Classes</span>
-            <h5 class="gallery-item-title">1-on-1 Keyboard Mentoring</h5>
-          </div>
+          <img src="/assets/teacher-keyboard-BxFcH9gl.jpg" alt="Keyboard Guidance by Umesh R">
         </div>
 
-        <div class="gallery-item" data-category="classes" data-title="Yamaha Keyboard Note Notation Practice">
-          <img src="/assets/student-yamaha-DxBEr2P7.jpg" alt="Yamaha Keyboard Note Notation Practice">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-tag">Classes</span>
-            <h5 class="gallery-item-title">Staff Notation & Chords</h5>
-          </div>
+        <div class="gallery-item" data-category="classes" data-title="Guitar Group Training Session">
+          <img src="/assets/guitar-group--Zjz4nx0.jpg" alt="Guitar Group Training Session">
         </div>
 
-        <div class="gallery-item" data-category="concerts" data-title="Annual Recital Live Stage Concert">
-          <img src="/assets/annual_recital_stage-T_FmEt4t.jpg" alt="Annual Recital Live Stage Concert">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-tag">Concerts</span>
-            <h5 class="gallery-item-title">Annual Grand Stage Recital</h5>
-          </div>
+        <div class="gallery-item" data-category="classes" data-title="Yamaha Keyboard Practice">
+          <img src="/assets/student-yamaha-DxBEr2P7.jpg" alt="Yamaha Keyboard Practice">
         </div>
 
-        <div class="gallery-item" data-category="concerts" data-title="Student Classical & Light Music Presentation">
-          <img src="/assets/vocal_performance-D-gMYVRu.jpg" alt="Student Classical Presentation">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-tag">Concerts</span>
-            <h5 class="gallery-item-title">Live Concert Performance</h5>
-          </div>
-        </div>
-
-        <div class="gallery-item" data-category="concerts" data-title="Acoustic Guitar Fingerstyle Performance">
-          <img src="/assets/acoustic_guitar_solo-D2iF18ca.jpg" alt="Acoustic Guitar Performance">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-tag">Concerts</span>
-            <h5 class="gallery-item-title">Acoustic Solo Performance</h5>
-          </div>
-        </div>
-
-        <div class="gallery-item" data-category="achievements" data-title="Student Certification & Awards Day">
-          <img src="/assets/awards_trophy_stage-v4DS7ED2.jpg" alt="Student Certification & Awards Day">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-tag">Achievements</span>
-            <h5 class="gallery-item-title">Awards & Trinity Honors</h5>
-          </div>
-        </div>
-
-        <div class="gallery-item" data-category="achievements" data-title="Umesh R, Founder & Music Programmer in Recording Studio">
-          <img src="/assets/umesh_studio-Cm2_vdVh.png" alt="Umesh R, Founder & Music Arranger in Studio">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-tag">Achievements</span>
-            <h5 class="gallery-item-title">Chief Mentor Umesh R in Studio</h5>
-          </div>
-        </div>
-
-        <div class="gallery-item" data-category="achievements" data-title="Swaranthara Official Emblem">
-          <img src="/assets/logo-CaojPZs_.jpg" alt="Swaranthara Official Emblem">
-          <div class="gallery-item-overlay">
-            <span class="gallery-item-tag">Achievements</span>
-            <h5 class="gallery-item-title">Swaranthara Insignia</h5>
-          </div>
+        <div class="gallery-item" data-category="achievements" data-title="Founder Umesh R in Studio">
+          <img src="/assets/umesh_studio-Cm2_vdVh.png" alt="Founder Umesh R in Studio">
         </div>
       </div>
 
