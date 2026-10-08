@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
   initContactForm();
   initTrialModal();
+  initGlobalSparkles();
 });
 
 /* ==========================================================================
@@ -174,7 +175,64 @@ function playNote(noteName, instrument = 'piano') {
   const keyEl = document.querySelector(`.piano-key[data-note="${noteName}"]`);
   if (keyEl) {
     keyEl.classList.add('active');
+    spawnNoteSparkles(keyEl, noteName);
     setTimeout(() => keyEl.classList.remove('active'), 180);
+  }
+}
+
+/**
+ * Spawns radiant glowing sparky musical notes & particles floating up from the pressed key
+ */
+function spawnNoteSparkles(keyEl, noteName) {
+  if (!keyEl) return;
+  const synthCard = keyEl.closest('.hero-synth-card') || keyEl.closest('.piano-wrapper');
+  if (!synthCard) return;
+
+  const keyRect = keyEl.getBoundingClientRect();
+  const cardRect = synthCard.getBoundingClientRect();
+
+  const startX = keyRect.left - cardRect.left + (keyRect.width / 2);
+  const startY = keyRect.top - cardRect.top + 10;
+
+  const noteSymbols = ['♪', '♫', '♬', '𝄞', '✦', '✨', '★', '♩'];
+  const colors = ['#ff6b18', '#ff944d', '#ffa94d', '#60a5fa', '#38bdf8', '#ffd166', '#ffffff'];
+
+  // Spawn 3 to 5 sparkling notes and light beams
+  const count = 4;
+  for (let i = 0; i < count; i++) {
+    const spark = document.createElement('div');
+    spark.className = 'piano-spark-particle';
+    const sym = noteSymbols[Math.floor(Math.random() * noteSymbols.length)];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    spark.textContent = sym;
+    spark.style.color = color;
+    spark.style.left = `${startX}px`;
+    spark.style.top = `${startY}px`;
+
+    const distanceX = (Math.random() - 0.5) * 90;
+    const distanceY = 60 + Math.random() * 90;
+    const rot = (Math.random() - 0.5) * 90;
+    const duration = 0.75 + Math.random() * 0.45;
+    const scale = 0.9 + Math.random() * 0.7;
+
+    spark.style.setProperty('--dx', `${distanceX}px`);
+    spark.style.setProperty('--dy', `-${distanceY}px`);
+    spark.style.setProperty('--rot', `${rot}deg`);
+    spark.style.setProperty('--scale', `${scale}`);
+    spark.style.animation = `sparkFloat ${duration}s cubic-bezier(0.16, 0.84, 0.44, 1) forwards`;
+
+    synthCard.appendChild(spark);
+
+    setTimeout(() => {
+      spark.remove();
+    }, duration * 1000);
+  }
+
+  // Pulse the stave line with glowing energy
+  const staveLine = document.querySelector('.keyboard-sparky-stave');
+  if (staveLine) {
+    staveLine.classList.add('pulse-glow');
+    setTimeout(() => staveLine.classList.remove('pulse-glow'), 350);
   }
 }
 
@@ -502,4 +560,53 @@ function showToast(message) {
   setTimeout(() => {
     toast.classList.remove('show');
   }, 3500);
+}
+
+/* ==========================================================================
+   10. Global Sparky Music Notes Interaction Generator
+   ========================================================================== */
+function initGlobalSparkles() {
+  const interactiveElements = document.querySelectorAll('.btn, .glass-card, .nav-link, .video-card, .stat-box, .faq-question');
+  const noteSymbols = ['♪', '♫', '♬', '𝄞', '✦', '✨', '★', '♩'];
+  const colors = ['#ff6b18', '#ff944d', '#ffa94d', '#60a5fa', '#38bdf8', '#ffd166', '#ffffff'];
+
+  interactiveElements.forEach(el => {
+    el.addEventListener('click', (e) => {
+      // Don't duplicate for piano keys which already have dedicated key sparks
+      if (el.classList.contains('piano-key')) return;
+
+      const clickX = e.clientX;
+      const clickY = e.clientY;
+
+      // Spawn 3 sparkling notes
+      for (let i = 0; i < 3; i++) {
+        const spark = document.createElement('div');
+        spark.className = 'global-click-sparkle';
+        const sym = noteSymbols[Math.floor(Math.random() * noteSymbols.length)];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        spark.textContent = sym;
+        spark.style.color = color;
+        spark.style.left = `${clickX}px`;
+        spark.style.top = `${clickY}px`;
+
+        const distanceX = (Math.random() - 0.5) * 80;
+        const distanceY = 40 + Math.random() * 60;
+        const rot = (Math.random() - 0.5) * 60;
+        const duration = 0.65 + Math.random() * 0.35;
+        const scale = 0.8 + Math.random() * 0.6;
+
+        spark.style.setProperty('--dx', `${distanceX}px`);
+        spark.style.setProperty('--dy', `-${distanceY}px`);
+        spark.style.setProperty('--rot', `${rot}deg`);
+        spark.style.setProperty('--scale', `${scale}`);
+        spark.style.animation = `sparkFloat ${duration}s cubic-bezier(0.16, 0.84, 0.44, 1) forwards`;
+
+        document.body.appendChild(spark);
+
+        setTimeout(() => {
+          spark.remove();
+        }, duration * 1000);
+      }
+    });
+  });
 }
