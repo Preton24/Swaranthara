@@ -303,15 +303,18 @@ function initVideoModal() {
   const modalBackdrop = document.getElementById('video-modal');
   const iframe = document.getElementById('video-modal-iframe');
   const closeBtn = document.getElementById('video-modal-close');
-  const videoCards = document.querySelectorAll('[data-youtube-id]');
+  const videoCards = document.querySelectorAll('[data-youtube-id], [data-instagram-url]');
 
   videoCards.forEach(card => {
     card.addEventListener('click', () => {
       const videoId = card.getAttribute('data-youtube-id');
+      const instagramUrl = card.getAttribute('data-instagram-url');
       if (videoId && iframe) {
         iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
         modalBackdrop?.classList.add('open');
         document.body.style.overflow = 'hidden';
+      } else if (instagramUrl) {
+        window.open(instagramUrl, '_blank', 'noopener,noreferrer');
       }
     });
   });
