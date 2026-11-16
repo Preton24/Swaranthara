@@ -302,17 +302,33 @@ function initPianoSynth() {
 function initVideoModal() {
   const modalBackdrop = document.getElementById('video-modal');
   const iframe = document.getElementById('video-modal-iframe');
+  const player = document.getElementById('video-modal-player');
+  const dialog = modalBackdrop?.querySelector('.video-modal-dialog');
   const closeBtn = document.getElementById('video-modal-close');
-  const videoCards = document.querySelectorAll('[data-youtube-id], [data-instagram-url]');
+  const videoCards = document.querySelectorAll('[data-youtube-id], [data-instagram-url], [data-local-video]');
+
+  function openModal(card) {
+    dialog?.classList.toggle('portrait', card.hasAttribute('data-portrait'));
+    modalBackdrop?.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
 
   videoCards.forEach(card => {
     card.addEventListener('click', () => {
       const videoId = card.getAttribute('data-youtube-id');
       const instagramUrl = card.getAttribute('data-instagram-url');
+      const localSrc = card.querySelector('.video-card-source')?.getAttribute('src');
       if (videoId && iframe) {
+        if (player) player.hidden = true;
+        iframe.hidden = false;
         iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-        modalBackdrop?.classList.add('open');
-        document.body.style.overflow = 'hidden';
+        openModal(card);
+      } else if (localSrc && player) {
+        if (iframe) iframe.hidden = true;
+        player.hidden = false;
+        player.src = localSrc;
+        openModal(card);
+        player.play().catch(() => {});
       } else if (instagramUrl) {
         window.open(instagramUrl, '_blank', 'noopener,noreferrer');
       }
@@ -322,6 +338,11 @@ function initVideoModal() {
   function closeVideo() {
     modalBackdrop?.classList.remove('open');
     if (iframe) iframe.src = '';
+    if (player) {
+      player.pause();
+      player.removeAttribute('src');
+      player.load();
+    }
     document.body.style.overflow = '';
   }
 

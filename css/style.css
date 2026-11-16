@@ -2260,10 +2260,26 @@ textarea.form-control {
   overflow: hidden;
 }
 
-.video-player-container iframe {
+.video-player-container iframe,
+.video-player-container video {
   width: 100%;
   height: 100%;
   border: none;
+  display: block;
+  background: #000;
+}
+
+.video-player-container [hidden] {
+  display: none;
+}
+
+/* Portrait clips (Shorts, phone recordings) */
+.video-modal-dialog.portrait {
+  max-width: min(440px, calc((90vh - 20px) * 9 / 16));
+}
+
+.video-modal-dialog.portrait .video-player-container {
+  aspect-ratio: 9 / 16;
 }
 
 .lightbox-dialog {

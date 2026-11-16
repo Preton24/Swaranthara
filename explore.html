@@ -369,6 +369,33 @@
             <p>Electrifying live keyboard musical celebration by Umesh Ram.</p>
           </div>
         </div>
+
+        <!-- Video 8: Evergreen Kannada Melody (YouTube Short) -->
+        <div class="video-card" data-youtube-id="11ThKeUOlqk" data-portrait>
+          <div class="video-thumb-wrap">
+            <img src="https://img.youtube.com/vi/11ThKeUOlqk/hqdefault.jpg" alt="Evergreen Kannada melody performed at Swaranthara" onerror="this.src='assets/images/student-yamaha.jpg'">
+            <div class="video-play-btn"><i class="fas fa-play"></i></div>
+            <div class="video-duration-badge"><i class="fab fa-youtube"></i> Short</div>
+          </div>
+          <div class="video-card-body">
+            <h4>Evergreen Kannada Melody</h4>
+            <p>A timeless Kannada classic performed by our students.</p>
+          </div>
+        </div>
+
+        <!-- Video 9: Student keyboard practice (local video) -->
+        <div class="video-card" data-local-video data-portrait>
+          <div class="video-thumb-wrap">
+            <img src="assets/images/video1-poster.jpg" alt="Young student practising keyboard from notation">
+            <div class="video-play-btn"><i class="fas fa-play"></i></div>
+            <div class="video-duration-badge">Studio Clip</div>
+          </div>
+          <video class="video-card-source" src="assets/images/Video1.mp4" preload="none" hidden></video>
+          <div class="video-card-body">
+            <h4>Young Keyboardist in Practice</h4>
+            <p>A student playing from notation during a keyboard session.</p>
+          </div>
+        </div>
       </div>
 
       <!-- YouTube Channel Showcase Card -->
@@ -483,6 +510,7 @@
       <button class="modal-close-btn" id="video-modal-close" aria-label="Close Video Modal">&times;</button>
       <div class="video-player-container">
         <iframe id="video-modal-iframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <video id="video-modal-player" controls playsinline hidden></video>
       </div>
     </div>
   </div>
